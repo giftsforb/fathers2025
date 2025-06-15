@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://search.brave.com/search?q=jwaf&source=desktop -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Father's Day Coupon Book</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefae0;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #333;
+    }
+    .coupon {
+      background-color: #faedcd;
+      border: 2px dashed #333;
+      border-radius: 10px;
+      margin: 20px auto;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+    .coupon-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .coupon-desc {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .redeem-button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      font-size: 14px;
+      background-color: #d4a373;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @media print {
+      body > *:not(.printable) {
+        display: none;
+      }
+      .printable {
+        margin-top: 100px;
+      }
+    }
+  </style>
+<style></style><meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="2.0.5"></head>
+<body>
+  <h1>Happy Father's Day!</h1>
+
+  <div class="coupon" id="coupon1">
+    <div class="coupon-title">GO WASH THE DISHES BILL</div>
+    <div class="coupon-desc">Redeem to send Bill to labor on the dishes, no complaints included.</div>
+    <button class="redeem-button" onclick="printCoupon(&#39;coupon1&#39;)">Redeem &amp; Print</button>
+  </div>
+
+  <div class="coupon" id="coupon2">
+    <div class="coupon-title">DO THE LAUNDRY BILL</div>
+    <div class="coupon-desc">Redeem to send Bill to clean all the clothes!</div>
+    <button class="redeem-button" onclick="printCoupon(&#39;coupon2&#39;)">Redeem &amp; Print</button>
+  </div>
+
+  <div class="coupon" id="coupon3">
+    <div class="coupon-title">Give me a massage Bill :D</div>
+    <div class="coupon-desc">Redeem to get a wonderful and very professional massage by Bill!</div>
+    <button class="redeem-button" onclick="printCoupon(&#39;coupon3&#39;)">Redeem &amp; Print</button>
+  </div>
+
+  <script>function printCoupon(couponId) {
+  const coupon = document.getElementById(couponId);
+  const printContent = coupon.cloneNode(true);
+  const printWindow = window.open('', '_blank', 'width=400,height=600');
+
+  printWindow.document.write(`
+    <html>
+    <head>
+      <title>Dad's Coupon</title>
+      <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          padding: 40px;
+          text-align: center;
+        }
+        .coupon {
+          background-color: #faedcd;
+          border: 2px dashed #333;
+          border-radius: 10px;
+          padding: 20px;
+          width: 80%;
+          margin: auto;
+          box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+        .coupon-title {
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .coupon-desc {
+          margin-top: 10px;
+          font-size: 18px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="coupon">
+        ${printContent.querySelector('.coupon-title').outerHTML}
+        ${printContent.querySelector('.coupon-desc').outerHTML}
+      </div>
+    </body>
+    </html>
+  `);
+
+  printWindow.document.close();
+
+  // Wait for the content to load before printing
+  printWindow.onload = function () {
+    printWindow.focus();
+    printWindow.print();
+  };
+}</script>
+
+<div id="shimeji-workArea" style="position: fixed; background: transparent; z-index: 2147483643; width: 100vw; height: 100vh; left: 0px; top: 0px; transform: translate(0px, 0px); pointer-events: none;"></div></body></html>
